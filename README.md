@@ -53,9 +53,17 @@ des tâches selon les colonnes **To-Do / Doing / Done**.
 
 ---
 
+
+- 📊 Diagramme de classes : [Consulter le diagramme](https://lucid.app/lucidchart/7efb4ddf-55bf-4aff-a019-d01212b079a9/edit?viewport_loc=-669%2C-658%2C4033%2C1892%2CHWEp-vi-RSFO&invitationId=inv_3c0fbb20-2178-4630-a50a-c56b47a8c684)
+
+- 🧩 Diagramme de cas d’utilisation : [Consulter le diagramme](https://lucid.app/lucidchart/5753cd54-b086-4917-9060-2d13f48ca46c/edit?viewport_loc=-626%2C154%2C3452%2C1441%2C.Q4MUjXso07N&invitationId=inv_45ca1b21-05cf-49b0-b44d-230ef793bd0a)
+
+- 🗄️ Diagramme ERD : [Consulter le diagramme](https://lucid.app/lucidchart/04ee872c-2dc2-4542-a93e-d0ef16e8056b/edit?viewport_loc=663%2C71%2C2817%2C1322%2C0_0&invitationId=inv_d2a94de6-8a55-4b01-aba2-3928fd0401df)
+
+---
+
 ## 📁 Structure du projet
 
-```txt
 smart-wallet/
 │
 ├── public/
@@ -89,40 +97,5 @@ smart-wallet/
 │
 └── README.md
 
-## 📐 Diagrams & Modélisation
-
-La conception de l’application **SMART WALLET 2.0** a été réalisée à l’aide
-de plusieurs diagrammes UML afin de bien structurer le système avant
-l’implémentation.
-
-### 📊 Diagramme de classes (UML)
-Représente la structure des classes, leurs attributs, méthodes
-et les relations entre elles.
-
-🔗 Lien :  
-👉 [Voir le diagramme de classes](https://lucid.app/lucidchart/7efb4ddf-55bf-4aff-a019-d01212b079a9/edit?viewport_loc=-669%2C-658%2C4033%2C1892%2CHWEp-vi-RSFO&invitationId=inv_3c0fbb20-2178-4630-a50a-c56b47a8c684)
-
----
-
-### 🧩 Diagramme de cas d’utilisation (Use Case Diagram)
-Montre les interactions entre l’utilisateur et le système
-(inscription, connexion, gestion des revenus et dépenses, dashboard).
-
-🔗 Lien :  
- 👉 [Voir le diagramme des cas d’utilisation](https://lucid.app/lucidchart/5753cd54-b086-4917-9060-2d13f48ca46c/edit?viewport_loc=-626%2C154%2C3452%2C1441%2C.Q4MUjXso07N&invitationId=inv_45ca1b21-05cf-49b0-b44d-230ef793bd0a)
-
----
-
-### 🗄️ Diagramme Entité–Relation (ERD)
-Décrit la structure de la base de données, les tables
-et les relations entre elles.
-
-🔗 Lien :  
-👉 [Voir le diagramme ERD](https://lucid.app/lucidchart/04ee872c-2dc2-4542-a93e-d0ef16e8056b/edit?viewport_loc=663%2C71%2C2817%2C1322%2C0_0&invitationId=inv_d2a94de6-8a55-4b01-aba2-3928fd0401df)
 
 
-- 📊 Diagramme de classes : [Consulter le diagramme](https://lucid.app/lucidchart/7efb4ddf-55bf-4aff-a019-d01212b079a9/edit?viewport_loc=-669%2C-658%2C4033%2C1892%2CHWEp-vi-RSFO&invitationId=inv_3c0fbb20-2178-4630-a50a-c56b47a8c684)
-
-- 🧩 Diagramme de cas d’utilisation : [Consulter le diagramme](https://lucid.app/lucidchart/5753cd54-b086-4917-9060-2d13f48ca46c/edit?viewport_loc=-626%2C154%2C3452%2C1441%2C.Q4MUjXso07N&invitationId=inv_45ca1b21-05cf-49b0-b44d-230ef793bd0a)
-
-- 🗄️ Diagramme ERD : [Consulter le diagramme](https://lucid.app/lucidchart/04ee872c-2dc2-4542-a93e-d0ef16e8056b/edit?viewport_loc=663%2C71%2C2817%2C1322%2C0_0&invitationId=inv_d2a94de6-8a55-4b01-aba2-3928fd0401df)
