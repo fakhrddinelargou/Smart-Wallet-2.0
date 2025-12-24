@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . "/../../app/models/User.php";
-// session_start();
+session_start();
 
 
 

@@ -2,7 +2,7 @@
 
 require_once __DIR__ . "/../../app/models/User.php";
 
-
+session_start();
 
 $error = $_SESSION['error'] ?? null;
 unset($_SESSION['error']);
@@ -19,7 +19,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         header("Location: Login.php");
         exit;
     }
-
+     header("Location: otp.php");
+        exit;
     
 
 }
@@ -35,19 +36,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 </head>
 <body>
 
+<!-- ALERT -->
+ <?php if(!empty($error)) {  ?>
+<div class="alert alert-error show" id="alert">
+  <span class="icon">!</span>
+  <p><?= $error ?></p>
+</div>
+<?php }   ?>
+
   <div class="container">
     <form class="auth-form" method="POST">
       <h2>Welcome Back</h2>
       <p class="subtitle">Please login to your account</p>
-
-      <!-- Error card (optional) -->
-      <!--
-      <div class="alert alert-error show">
-        <span class="icon">!</span>
-        <p>Invalid email or password</p>
-      </div>
-      -->
-
       <div class="input-group">
         <label>Email</label>
         <input type="email" name="email" placeholder="example@email.com" required>
