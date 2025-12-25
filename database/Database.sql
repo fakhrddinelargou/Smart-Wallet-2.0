@@ -12,13 +12,22 @@ CREATE TABLE users(
 ALTER TABLE users
 ADD full_name VARCHAR(100) NOT NULL AFTER id;
 
-CREATE TABLE categories(
-id INT AUTO_INCREMENT PRIMARY KEY,
-fullName VARCHAR(100) NOT NULL,
-type ENUM('income','expense') NOT NULL,
-user_id INT NOT NULL , 
-FOREIGN KEY (user_id) REFERENCES users(id)
+
+
+
+CREATE TABLE categories (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  fullName VARCHAR(100) NOT NULL,
+  type ENUM('income','expense') NOT NULL
 );
+
+INSERT INTO categories (fullName, type) VALUES
+('Shopping', 'expense'),
+('Food', 'expense'),
+('Transport', 'expense'),
+('Salary', 'income'),
+('Other', 'expense');
+
 
 CREATE TABLE category_limit(
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -30,6 +39,7 @@ CREATE TABLE category_limit(
     FOREIGN KEY (user_id) REFERENCES users(id),
     FOREIGN KEY (category_id) REFERENCES categories(id)
 );
+
 
 
 CREATE TABLE incomes(
@@ -44,6 +54,11 @@ CREATE TABLE incomes(
     FOREIGN KEY (category_id) REFERENCES categories(id)
 );
 
+ALTER TABLE incomes
+MODIFY category_id INT NULL;
+
+
+
 
 CREATE TABLE expenses(
     id INT AUTO_INCREMENT PRIMARY KEY ,
@@ -55,8 +70,9 @@ CREATE TABLE expenses(
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id ) REFERENCES users(id),
     FOREIGN KEY (category_id) REFERENCES categories(id)
-)
+);
 
+DROP TABLE expenses;
 
 -- INSERT INTO users (email,password) VALUES ("fakhreddinelargou@gmail.com" , "123456789");
 -- INSERT INTO users (email,password) VALUES ("redwan@gmail.com" , "rdwan");
@@ -68,3 +84,4 @@ CREATE TABLE expenses(
 
 -- DROP TABLE incomes;
 USE smart_wallet_2;
+
