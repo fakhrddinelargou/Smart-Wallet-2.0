@@ -2,11 +2,11 @@
 
 require_once __DIR__ . "/../../app/models/Income.php";
 require_once __DIR__ . "/../../app/models/Expense.php";
-require_once __DIR__ . "/../incomes/delete.php";
+// require_once __DIR__ . "/../incomes/delete.php";
 
 session_start();
 $user_id = $_SESSION['user_id'];
-
+// echo $user_id;
 if (empty($user_id)) {
   header("Location: ../auth/Login.php");
   exit;
@@ -235,7 +235,7 @@ $getAllExpenses = $expense->getAllExpenses();
                   <td><?= $income["category_name"] ?></td>
                   <td class="actions">
                     <a href="../transactions/update.php?editIncome=<?= $income['id'] ?>" class="btn-edit">Edit</a>
-                    <a href="../dashboard/index.php?deletIncome=<?=  $income['id'] ?>" class="btn-delete">Delete</a>
+                    <a href="../incomes/delete.php?deletIncome=<?=  $income['id'] ?>" class="btn-delete">Delete</a>
                   </td>
                 </tr>
               <?php } ?>
@@ -268,7 +268,7 @@ $getAllExpenses = $expense->getAllExpenses();
                   <td><?= $expense["category"] ?></td>
                   <td class="actions">
                     <a href="../transactions/update.php?editExpense=<?= $expense['id'] ?>" class="btn-edit">Edit</a>
-                    <a href="../dashboard/index.php?delet=<?=  $expense['id'] ?>" class="btn-delete">Delete</a>
+                    <a href="../expenses/delete.php?deletExpense=<?=  $expense['id'] ?>" class="btn-delete">Delete</a>
                   </td>
                 </tr>
               <?php } ?>
